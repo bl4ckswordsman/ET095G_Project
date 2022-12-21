@@ -10,8 +10,6 @@ int xLoc = 0; // Default coordinates
 int yLoc = 0; //
 
 
-//bool centerPressed = false;
-
 /**
  * Made with Marlin Bitmap Converter
  * https://marlinfw.org/tools/u8glib/converter.html
@@ -113,7 +111,6 @@ void printBackG(C12832 &_lcd, bool &centPressed) {
     } else {
       printBackgroundL(_lcd);
     }
-    //_lcd.copy_to_lcd();
   }
 }
 
