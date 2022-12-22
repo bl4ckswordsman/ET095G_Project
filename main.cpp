@@ -19,7 +19,7 @@ int dinoY = 17;
 int cactX = 128;
 int cactY = 19;
 
-double speed = 0.2; // actually delay, higher value gives lower speed
+double speed = 0.2; // actually dino movement delay, higher value gives lower speed
 int cactSpeed = 2;
 double cactDelay = 0.07;
 
@@ -47,9 +47,9 @@ void printAll() {
 
 void jump() {
   for (int i = 0; i < 4 && !collision(dinoY - 2, cactX + 2);
-       i++) {   // Edge coordinates
-                // of the dino and the cactus adjusted on collision check funtion
-                // in order to avoid calculation errors caused by movement
+       i++) {   // Edge coordinates of the dino and the cactus adjusted
+                //  on collision check funtion in order to avoid calculation
+                //  errors caused by jump movement
     dinoY -= 4;
     wait(speed);
     printAll();
@@ -82,8 +82,6 @@ void finalScore() {
 
 int main() {
   cactT.attach(&cactMove, cactDelay);
-
-  //allLEDs();
 
   center2.fall(&centerPress);
 

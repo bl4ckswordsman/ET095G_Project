@@ -5,9 +5,8 @@
 #include "LEDs.h"
 AnalogIn ain3(p19);      //Pot 1 will be used
 
-  LocalFileSystem local("local");
-  char filen[] = "/local/scores.txt";
-
+LocalFileSystem local("local");
+char filen[] = "/local/scores.txt";
 
 char dinoL[] = {
   0x01,0xC0, // .......###......
@@ -195,13 +194,12 @@ void viewAndSaveScore(C12832 &_lcd, int &score) {
     FILE *fp = fopen(filen, "a");
     fprintf(fp, "%u \n", score);
     fclose(fp);
-    HSLEDs();
   } else {
-
     _lcd.locate(23, 18);
     _lcd.printf("NEW HIGHSCORE: %u", score);
     FILE *fp = fopen(filen, "a");
     fprintf(fp, "%u \n", score);
     fclose(fp);
+    HSLEDs();
   }
 }
