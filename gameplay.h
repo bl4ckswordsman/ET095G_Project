@@ -186,17 +186,22 @@ void viewAndSaveScore(C12832 &_lcd, int &score) {
   }
 
   if (score < max) {
-    allLEDs();
+
     _lcd.locate(30, 13);
     _lcd.printf("YOUR SCORE: %u", score);
     _lcd.locate(34, 22);
     _lcd.printf("HIGHSCORE: %u", max);
     _lcd.copy_to_lcd();
+    FILE *fp = fopen(filen, "a");
+    fprintf(fp, "%u \n", score);
+    fclose(fp);
+    HSLEDs();
   } else {
+
     _lcd.locate(23, 18);
     _lcd.printf("NEW HIGHSCORE: %u", score);
+    FILE *fp = fopen(filen, "a");
+    fprintf(fp, "%u \n", score);
+    fclose(fp);
   }
-  FILE *fp = fopen(filen, "a");
-  fprintf(fp, "%u \n", score);
-  fclose(fp);
 }
