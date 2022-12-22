@@ -89,14 +89,10 @@ bool darkThemeChosen2() {
 Bitmap boot1Lbm = {128, 32, 16, boot1L};
 Bitmap boot1Dbm = {128, 32, 16, boot1D};
 
-void printStartSL(C12832 &_lcd) {
-  _lcd.print_bm(boot1Lbm, xLoc2, yLoc2);
-}
+void printStartSL(C12832 &_lcd) { _lcd.print_bm(boot1Lbm, xLoc2, yLoc2); }
 
-void printStartSD(C12832 &_lcd) {
-  _lcd.print_bm(boot1Dbm, xLoc2, yLoc2);
+void printStartSD(C12832 &_lcd) { _lcd.print_bm(boot1Dbm, xLoc2, yLoc2); }
 
-}
 void printStartS(C12832 &_lcd, bool &centPressed) {
   if (!centPressed) {
     if (darkThemeChosen2()) {
@@ -104,6 +100,5 @@ void printStartS(C12832 &_lcd, bool &centPressed) {
     } else {
       printStartSL(_lcd);
     }
-    //_lcd.copy_to_lcd();
   }
 }
