@@ -14,7 +14,6 @@ PwmOut green(p24);
 PwmOut blue(p25);*/
 
 
-
 void blink4LEDs() {
   led1 = !led1;
   wait(LEDdelay1);
