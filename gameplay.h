@@ -184,7 +184,7 @@ void viewAndSaveScore(C12832 &_lcd, int &score) {
       }
     }
     fclose(fileR);
-    HSLEDs();
+    
   }
 
   if (score <= max) {        //if the score isn't a new record
@@ -202,5 +202,6 @@ void viewAndSaveScore(C12832 &_lcd, int &score) {
     FILE *fp = fopen(filen, "a");
     fprintf(fp, "%u \n", score);
     fclose(fp);
+    HSLEDs();
   }
 }
