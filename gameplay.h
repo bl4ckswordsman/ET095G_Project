@@ -1,3 +1,5 @@
+// ET 095G : Project
+// Amarildo Rajta
 #include "mbed.h"
 #include "C12832.h"
 #include <stdio.h>
@@ -98,6 +100,7 @@ bool darkThemeChosen3() {
   }
 }
 
+//D=dark mode version, L=light mode version
 Bitmap dinoLbm = {12, 11, 2, dinoL};
 Bitmap dinoDbm = {12, 11, 2, dinoD};
 
@@ -159,7 +162,7 @@ void printGO(C12832 &_lcd, bool &centPressed) {
   _lcd.copy_to_lcd();
 }
 
-bool collision(int yDin, int xCact) {
+bool collision(int yDin, int xCact) {   //check for collision betweem player and obstacle
   if (xCact <= 12 && xCact > 3) {
     if ((yDin + 12) > 16) {
       return true;
@@ -169,7 +172,6 @@ bool collision(int yDin, int xCact) {
 }
 
 void viewAndSaveScore(C12832 &_lcd, int &score) {
-
   FILE *fileR;
   int max = 0;
   int a = 0;
@@ -182,10 +184,10 @@ void viewAndSaveScore(C12832 &_lcd, int &score) {
       }
     }
     fclose(fileR);
+    HSLEDs();
   }
 
-  if (score < max) {
-
+  if (score <= max) {        //if the score isn't a new record
     _lcd.locate(30, 13);
     _lcd.printf("YOUR SCORE: %u", score);
     _lcd.locate(34, 22);
@@ -194,12 +196,11 @@ void viewAndSaveScore(C12832 &_lcd, int &score) {
     FILE *fp = fopen(filen, "a");
     fprintf(fp, "%u \n", score);
     fclose(fp);
-  } else {
+  } else if (score > max) {   //if the score is a new record
     _lcd.locate(23, 18);
     _lcd.printf("NEW HIGHSCORE: %u", score);
     FILE *fp = fopen(filen, "a");
     fprintf(fp, "%u \n", score);
     fclose(fp);
-    HSLEDs();
   }
 }

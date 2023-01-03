@@ -1,3 +1,5 @@
+// ET 095G : Project
+// Amarildo Rajta
 #include "mbed.h"
 
 float LEDdelay1 = 0.07;

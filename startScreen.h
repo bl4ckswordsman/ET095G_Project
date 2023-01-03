@@ -1,3 +1,5 @@
+// ET 095G : Project
+// Amarildo Rajta
 #include "mbed.h"
 #include "C12832.h"
 
@@ -86,6 +88,7 @@ bool darkThemeChosen2() {
   }
 }
 
+//D=dark mode version, L=light mode version
 Bitmap boot1Lbm = {128, 32, 16, boot1L};
 Bitmap boot1Dbm = {128, 32, 16, boot1D};
 

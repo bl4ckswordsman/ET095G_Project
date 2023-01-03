@@ -32,8 +32,6 @@ void time() {
   lcd.locate(55, 2);
   ti = t.read();
   lcd.printf("SCORE: %u", ti);
-  lcd.locate(30, 2);
-  lcd.printf("%u", cactX);
 }
 
 void printAll() {

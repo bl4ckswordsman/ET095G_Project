@@ -1,6 +1,5 @@
-//#pragma once
-//#ifndef BACKGROUND_H
-//#define BACKGROUND_H
+// ET 095G : Project
+// Amarildo Rajta
 
 #include "mbed.h"
 #include "C12832.h"
@@ -86,6 +85,7 @@ char groundWSunD[] = {
   0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF  // ################################################################################################################################
 };
 
+//checking if the dark or light mode is chosen via the potentiometer
 bool darkThemeChosen() {
   if (ain.read() > 0.0 && ain.read() < 0.5) {
     return false;
@@ -94,6 +94,7 @@ bool darkThemeChosen() {
   }
 }
 
+//D=dark mode version, L=light mode version
 Bitmap backgroundBM = {128, 32, 16, groundWSun};
 // Display size: 128x32
 Bitmap backgroundBMd = {128, 32, 16, groundWSunD};
