@@ -1,0 +1,2 @@
+# ET095G_Project
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/43b9404c85e647cdba4d5a10a18f0e43)](https://app.codacy.com/gh/bl4ckswordsman/ET095G_Project?utm_source=github.com&utm_medium=referral&utm_content=bl4ckswordsman/ET095G_Project&utm_campaign=Badge_Grade_Settings)
