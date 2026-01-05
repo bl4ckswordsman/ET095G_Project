@@ -1,4 +1,4 @@
-# ET095G_Project [![Codacy Badge](https://app.codacy.com/project/badge/Grade/39a3abd75c4449a38c3cb5271f14811f)](https://www.codacy.com/gh/bl4ckswordsman/ET095G_Project/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bl4ckswordsman/ET095G_Project&amp;utm_campaign=Badge_Grade)
+# ET095G (Introduction to Embedded System Programming) Project [![Codacy Badge](https://app.codacy.com/project/badge/Grade/39a3abd75c4449a38c3cb5271f14811f)](https://www.codacy.com/gh/bl4ckswordsman/ET095G_Project/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bl4ckswordsman/ET095G_Project&amp;utm_campaign=Badge_Grade)
 
 ### NXP LPC1768 Dinosaur Game Project
 
